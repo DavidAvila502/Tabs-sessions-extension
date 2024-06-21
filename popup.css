@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+   box-sizing: border-box;
+   margin: 0px;
+   padding: 0px;
+}
+
+.main-container {
+   background-color: white;
+   height: 300px;
+   width: 300px;
+}
+
+.title-container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: #212121;
+   background-color: #042940;
+   padding: 15px;
+}
+
+.title {
+   font-family: "Roboto", "sans-serif";
+   font-size: 25px;
+   font-weight: 400;
+   color: white;
+   margin-right: 10px;
+}
+
+.icon {
+   width: 30px;
+}
+
+.menu-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   height: 100%;
+   gap: 20px;
+}
+
+.menu-button-container {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   gap: 8px;
+   /* background-color: #212121; */
+   background-color: #042940;
+   padding: 15px 8px;
+   width: 250px;
+   border-radius: 10px;
+}
+
+.menu-button-container:hover {
+   cursor: pointer;
+   background-color: #393939;
+   background-color: #005c53;
+}
+.menu-button-text {
+   font-family: "Roboto", "sans-serif";
+   font-size: 18px;
+   color: white;
+   text-align: center;
+}
+
+/* ****************** SAVE SCRREN ******* */
+
+.save_screen {
+   background-color: rgba(57, 57, 57, 0.966);
+   position: absolute;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   gap: 20px;
+   display: none;
+}
+
+.save_form {
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   gap: 5px;
+}
+
+.save_form_text {
+   font-family: "Roboto", "sans-serif";
+   font-size: 15px;
+   color: white;
+}
+
+.save_form_input {
+   border: none;
+   outline: none;
+   padding-left: 6px;
+   font-size: 15px;
+   padding: 5px;
+   height: 30px;
+}
+
+.save_form_input:focus {
+   border: none;
+   outline: none;
+}
+
+.save-buttons-container {
+   display: flex;
+   flex-direction: row;
+   gap: 15px;
+}
+
+.save-screen-button {
+   background-color: #212121;
+   border-radius: 10px;
+   padding: 10px;
+   width: 80px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-family: "Roboto", "sans-serif";
+   color: white;
+   font-size: 15px;
+   cursor: pointer;
+}

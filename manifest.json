@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "name": "Tabs sessions",
+    "version": "0.1.0",
+    "description": "Extension that help you to save your tabs in the current context.",
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "permissions": [
+      "storage",
+      "tabs"
+    ]
+  }
+  

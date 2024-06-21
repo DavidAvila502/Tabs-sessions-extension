@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" type="text/css" href="popup.css" />
+      <title>Document</title>
+   </head>
+   <body>
+      <div class="main-container">
+         <div class="title-container">
+            <p class="title">Tabs sessions</p>
+            <img src="./images/icon.svg" alt="icon" class="icon" />
+         </div>
+
+         <!-- Menu -->
+         <div class="menu-container">
+            <div class="menu-button-container" id="menu-save-button">
+               <p class="menu-button-text">Save session</p>
+               <img src="./images/save_icon.svg" alt="save_icon" />
+            </div>
+
+            <div class="menu-button-container">
+               <p class="menu-button-text">Load session</p>
+               <img src="./images/load_icon.svg" alt="load_icon" />
+            </div>
+         </div>
+
+         <!-- Save screen -->
+
+         <div class="save_screen">
+            <label class="save_form save_form_text" for="">
+               Enter a session name:
+               <input class="save_form_input" type="text" name="" id="" />
+            </label>
+
+            <div class="save-buttons-container">
+               <div class="save-screen-button" id="save-screen-save-button">
+                  <p>Save</p>
+               </div>
+
+               <div class="save-screen-button" id="save-screen-cancel-button">
+                  <p>Cancel</p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script src="popup.js"></script>
+   </body>
+</html>
