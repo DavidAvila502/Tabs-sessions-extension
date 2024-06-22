@@ -14,36 +14,40 @@
          </div>
 
          <!-- Menu -->
+
          <div class="menu-container">
-            <div class="menu-button-container" id="menu-save-button">
-               <p class="menu-button-text">Save session</p>
+            <div class="btn1" id="save-btn">
+               <p>Save session</p>
                <img src="./images/save_icon.svg" alt="save_icon" />
             </div>
 
-            <div class="menu-button-container">
-               <p class="menu-button-text">Load session</p>
+            <div class="btn1" id="load-btn">
+               <p>Load session</p>
                <img src="./images/load_icon.svg" alt="load_icon" />
             </div>
          </div>
 
          <!-- Save screen -->
 
-         <div class="save_screen">
-            <label class="save_form save_form_text" for="">
+         <div class="save-screen">
+            <label class="save-form" for="">
                Enter a session name:
-               <input class="save_form_input" type="text" name="" id="" />
+               <input class="input1" type="text" name="" id="session-name" />
             </label>
 
             <div class="save-buttons-container">
-               <div class="save-screen-button" id="save-screen-save-button">
+               <div class="btn2" id="confirm-save">
                   <p>Save</p>
                </div>
 
-               <div class="save-screen-button" id="save-screen-cancel-button">
+               <div class="btn2" id="cancel-save-btn">
                   <p>Cancel</p>
                </div>
             </div>
          </div>
+
+         <!-- Sessions screen -->
+         <div class="sessions-screen"></div>
       </div>
       <script src="popup.js"></script>
    </body>
