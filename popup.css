@@ -172,6 +172,9 @@
    font-size: 16px;
    color: white;
    width: 100%;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
 }
 
 .session-item-options {
@@ -194,6 +197,13 @@
    align-items: center;
    justify-content: center;
    cursor: pointer;
+
+   transition: all;
+   transition-duration: 400ms;
+}
+
+.option:hover {
+   color: lawngreen;
 }
 
 .option_title {
