@@ -55,6 +55,8 @@
    font-size: 18px;
    color: white;
    text-align: center;
+   transition: all;
+   transition-duration: 400ms;
 }
 
 .btn1:hover {
@@ -129,4 +131,74 @@
    display: none;
    flex-direction: column;
    height: 100%;
+}
+
+.title2 {
+   font-family: "roboto", "sans-serif";
+   text-align: center;
+   font-weight: 400;
+   font-size: 20px;
+}
+.sessions-screen-title {
+   margin-bottom: 10px;
+}
+
+.sessions-list-container {
+   height: 100%;
+   /* background-color: #393939; */
+   background-color: white;
+   overflow-y: auto;
+   display: flex;
+   flex-direction: column;
+   gap: 2px;
+}
+
+.session-item {
+   display: flex;
+   flex-direction: column;
+   background-color: #042940;
+}
+
+.session-item-title-container {
+   display: flex;
+   padding: 18px;
+   position: relative;
+}
+
+.title3 {
+   font-family: "roboto", "sans-serif";
+   text-align: center;
+   font-weight: bold;
+   font-size: 16px;
+   color: white;
+   width: 100%;
+}
+
+.session-item-options {
+   position: absolute;
+   top: 0;
+   right: 0;
+   left: 0;
+   bottom: 0;
+   background-color: #042940;
+   display: none;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   gap: 30px;
+}
+
+.option {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+}
+
+.option_title {
+   font-family: "roboto", "sans-serif";
+   font-weight: 300;
+   font-size: 15px;
+   color: white;
 }
