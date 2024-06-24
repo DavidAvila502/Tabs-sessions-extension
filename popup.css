@@ -16,7 +16,6 @@
    display: flex;
    align-items: center;
    justify-content: center;
-   background-color: #212121;
    background-color: #042940;
    padding: 15px;
 }
@@ -42,34 +41,32 @@
    gap: 20px;
 }
 
-.menu-button-container {
+.btn1 {
    display: flex;
    flex-direction: row;
    align-items: center;
    justify-content: center;
    gap: 8px;
-   /* background-color: #212121; */
    background-color: #042940;
    padding: 15px 8px;
    width: 250px;
    border-radius: 10px;
-}
-
-.menu-button-container:hover {
-   cursor: pointer;
-   background-color: #393939;
-   background-color: #005c53;
-}
-.menu-button-text {
    font-family: "Roboto", "sans-serif";
    font-size: 18px;
    color: white;
    text-align: center;
+   transition: all;
+   transition-duration: 400ms;
+}
+
+.btn1:hover {
+   cursor: pointer;
+   background-color: #005c53;
 }
 
 /* ****************** SAVE SCRREN ******* */
 
-.save_screen {
+.save-screen {
    background-color: rgba(57, 57, 57, 0.966);
    position: absolute;
    top: 0;
@@ -84,20 +81,17 @@
    display: none;
 }
 
-.save_form {
+.save-form {
    display: flex;
    justify-content: center;
    flex-direction: column;
    gap: 5px;
-}
-
-.save_form_text {
    font-family: "Roboto", "sans-serif";
    font-size: 15px;
    color: white;
 }
 
-.save_form_input {
+.input1 {
    border: none;
    outline: none;
    padding-left: 6px;
@@ -106,7 +100,7 @@
    height: 30px;
 }
 
-.save_form_input:focus {
+.input1:focus {
    border: none;
    outline: none;
 }
@@ -117,7 +111,7 @@
    gap: 15px;
 }
 
-.save-screen-button {
+.btn2 {
    background-color: #212121;
    border-radius: 10px;
    padding: 10px;
@@ -129,4 +123,92 @@
    color: white;
    font-size: 15px;
    cursor: pointer;
+}
+
+/************ SESSION SCREEN ******** */
+
+.sessions-screen {
+   display: none;
+   flex-direction: column;
+   height: 100%;
+}
+
+.title2 {
+   font-family: "roboto", "sans-serif";
+   text-align: center;
+   font-weight: 400;
+   font-size: 20px;
+}
+.sessions-screen-title {
+   margin-bottom: 10px;
+}
+
+.sessions-list-container {
+   height: 100%;
+   /* background-color: #393939; */
+   background-color: white;
+   overflow-y: auto;
+   display: flex;
+   flex-direction: column;
+   gap: 2px;
+}
+
+.session-item {
+   display: flex;
+   flex-direction: column;
+   background-color: #042940;
+}
+
+.session-item-title-container {
+   display: flex;
+   padding: 18px;
+   position: relative;
+}
+
+.title3 {
+   font-family: "roboto", "sans-serif";
+   text-align: center;
+   font-weight: bold;
+   font-size: 16px;
+   color: white;
+   width: 100%;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+}
+
+.session-item-options {
+   position: absolute;
+   top: 0;
+   right: 0;
+   left: 0;
+   bottom: 0;
+   background-color: #042940;
+   display: none;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   gap: 30px;
+}
+
+.option {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+
+   transition: all;
+   transition-duration: 400ms;
+}
+
+.option:hover {
+   color: lawngreen;
+}
+
+.option_title {
+   font-family: "roboto", "sans-serif";
+   font-weight: 300;
+   font-size: 15px;
+   color: white;
 }

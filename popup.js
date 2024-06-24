@@ -1,34 +1,42 @@
-document.addEventListener("DOMContentLoaded", function () {
-   // buttons of menu save
-   const menu_save_button = document.getElementById("menu-save-button");
+import { saveTabs } from "./utils/tabs.js";
+import { load_list_sessions } from "./utils/sessions.js";
 
-   menu_save_button.addEventListener("click", () => {
-      const save_screen = document.getElementsByClassName("save_screen")[0];
+document.addEventListener("DOMContentLoaded", function () {
+   const save_btn = document.getElementById("save-btn");
+   const confirm_save_btn = document.getElementById("confirm-save");
+   const cancel_save_btn = document.getElementById("cancel-save-btn");
+   const load_btn = document.getElementById("load-btn");
+
+   save_btn.addEventListener("click", () => {
+      const save_screen = document.getElementsByClassName("save-screen")[0];
       save_screen.style.display = "flex";
    });
 
-   // buttons of save screen
-   const save_screen_save_button = document.getElementById(
-      "save-screen-save-button"
-   );
-   save_screen_save_button.addEventListener("click", async () => {
-      const save_screen = document.getElementsByClassName("save_screen")[0];
+   load_btn.addEventListener("click", async () => {
+      const main_menu = document.getElementsByClassName("menu-container")[0];
+      const sessions_menu =
+         document.getElementsByClassName("sessions-screen")[0];
 
-      let tabs = await chrome.tabs.query({});
+      main_menu.style.display = "none";
+      sessions_menu.style.display = "flex";
 
-      tabs.forEach((element) => {
-         console.log(element.url);
-      });
-
-      save_screen.style.display = "none";
+      await load_list_sessions();
    });
 
-   const save_screen_cancel_button = document.getElementById(
-      "save-screen-cancel-button"
-   );
+   confirm_save_btn.addEventListener("click", async () => {
+      const save_screen = document.getElementsByClassName("save-screen")[0];
 
-   save_screen_cancel_button.addEventListener("click", () => {
-      const save_screen = document.getElementsByClassName("save_screen")[0];
+      const session_name = document.getElementById("session-name");
+
+      if (session_name.value) {
+         await saveTabs(session_name.value);
+         save_screen.style.display = "none";
+         session_name.value = "";
+      }
+   });
+
+   cancel_save_btn.addEventListener("click", () => {
+      const save_screen = document.getElementsByClassName("save-screen")[0];
       save_screen.style.display = "none";
    });
 });
