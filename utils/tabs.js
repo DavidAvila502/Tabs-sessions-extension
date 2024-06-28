@@ -20,3 +20,7 @@ export const saveTabs = async (session_name) => {
    // save data
    await chrome.storage.local.set({ sessions: all_sessions });
 };
+
+export const openTab = async (url) => {
+   await chrome.tabs.create({ url: url });
+};
