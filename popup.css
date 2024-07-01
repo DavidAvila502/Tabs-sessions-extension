@@ -229,3 +229,7 @@
    text-overflow: ellipsis;
    cursor: pointer;
 }
+
+.url_item:hover {
+   color: black;
+}
